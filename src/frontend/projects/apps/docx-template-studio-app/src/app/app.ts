@@ -12,6 +12,8 @@ import { Shell } from '@docx-template-studio/shared/ui';
       <ng-container shellNav>
         @if (user(); as user) {
           <span class="text-slate-600" data-testid="user-name">{{ user.displayName }}</span>
+          <a routerLink="/contracts" class="text-blue-600">Contracts</a>
+          <a routerLink="/templates" class="text-blue-600">Templates</a>
           <a routerLink="/account/password" class="text-blue-600">Change password</a>
           <button type="button" class="text-blue-600" (click)="logOut()">Log out</button>
         } @else {
