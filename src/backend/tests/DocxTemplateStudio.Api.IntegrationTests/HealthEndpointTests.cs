@@ -1,11 +1,9 @@
 using System.Net;
 using System.Net.Http.Json;
-using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
-public sealed class HealthEndpointTests(WebApplicationFactory<Program> factory)
-    : IClassFixture<WebApplicationFactory<Program>>
+public sealed class HealthEndpointTests(DocxTemplateStudioApiFactory factory) : IClassFixture<DocxTemplateStudioApiFactory>
 {
     [Fact]
     public async Task Get_health_returns_ok_status()
