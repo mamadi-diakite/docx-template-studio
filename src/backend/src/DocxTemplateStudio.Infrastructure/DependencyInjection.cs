@@ -2,6 +2,7 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using DocxTemplateStudio.Application.EmploymentContracts;
 using DocxTemplateStudio.Application.Security;
 using DocxTemplateStudio.Application.Users;
 using DocxTemplateStudio.Infrastructure.Persistence;
@@ -20,6 +21,7 @@ public static class DependencyInjection
         services.TryAddSingleton(TimeProvider.System);
         services.AddSingleton<IPasswordHasher, IdentityPasswordHasher>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IContractRepository, ContractRepository>();
         services.AddScoped<DemoDataSeeder>();
 
         return services;

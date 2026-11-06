@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using DocxTemplateStudio.Application.Auth;
+using DocxTemplateStudio.Application.EmploymentContracts;
 using DocxTemplateStudio.Application.Security;
 using DocxTemplateStudio.Application.Users;
 
@@ -15,11 +16,13 @@ public sealed class ApplicationDependencyInjectionTests
             .AddSingleton(TimeProvider.System)
             .AddSingleton<IUserRepository, InMemoryUserRepository>()
             .AddSingleton<IPasswordHasher, FakePasswordHasher>()
-            .AddSingleton<IAccessTokenIssuer, FakeTokenIssuer>();
+            .AddSingleton<IAccessTokenIssuer, FakeTokenIssuer>()
+            .AddSingleton<IContractRepository, InMemoryContractRepository>();
 
         using var provider = services.BuildServiceProvider();
         using var scope = provider.CreateScope();
 
         Assert.NotNull(scope.ServiceProvider.GetService<AuthService>());
+        Assert.NotNull(scope.ServiceProvider.GetService<ContractService>());
     }
 }

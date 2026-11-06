@@ -1,4 +1,5 @@
 using DocxTemplateStudio.Application.Auth;
+using DocxTemplateStudio.Application.EmploymentContracts;
 using DocxTemplateStudio.Application.Security;
 using DocxTemplateStudio.Application.Users;
 using DocxTemplateStudio.Domain;
@@ -50,4 +51,38 @@ internal sealed class FakeTokenIssuer : IAccessTokenIssuer
 internal sealed class FixedTimeProvider(DateTimeOffset now) : TimeProvider
 {
     public override DateTimeOffset GetUtcNow() => now;
+}
+
+internal sealed class InMemoryContractRepository : IContractRepository
+{
+    public List<Contract> Contracts { get; } = [];
+
+    public (string? Search, int Skip, int Take) LastSearch { get; private set; }
+
+    public int SaveCount { get; private set; }
+
+    public Task<(IReadOnlyList<Contract> Items, int TotalCount)> SearchAsync(
+        string? search,
+        int skip,
+        int take,
+        CancellationToken cancellationToken)
+    {
+        LastSearch = (search, skip, take);
+        var matches = Contracts.Where(c => search is null || c.EmployeeLastName.Contains(search, StringComparison.OrdinalIgnoreCase)).ToList();
+
+        return Task.FromResult<(IReadOnlyList<Contract>, int)>(([.. matches.Skip(skip).Take(take)], matches.Count));
+    }
+
+    public Task<Contract?> FindAsync(Guid id, CancellationToken cancellationToken) =>
+        Task.FromResult(Contracts.SingleOrDefault(c => c.Id == id));
+
+    public void Add(Contract contract) => Contracts.Add(contract);
+
+    public void Remove(Contract contract) => Contracts.Remove(contract);
+
+    public Task SaveChangesAsync(CancellationToken cancellationToken)
+    {
+        SaveCount++;
+        return Task.CompletedTask;
+    }
 }

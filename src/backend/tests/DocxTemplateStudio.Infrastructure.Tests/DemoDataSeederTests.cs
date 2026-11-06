@@ -28,6 +28,19 @@ public sealed class DemoDataSeederTests : IDisposable
     }
 
     [Fact]
+    public async Task Seeds_fictional_contracts_of_every_type()
+    {
+        await SeedAsync();
+
+        await using var db = _database.CreateContext();
+        var contracts = await db.Contracts.ToListAsync();
+
+        Assert.Equal(8, contracts.Count);
+        Assert.Equal(Enum.GetValues<ContractType>(), contracts.Select(c => c.Type).Distinct().Order());
+        Assert.All(contracts, c => Assert.Equal(Now, c.CreatedAtUtc));
+    }
+
+    [Fact]
     public async Task Every_demo_account_accepts_the_demo_password()
     {
         await SeedAsync();
@@ -48,6 +61,7 @@ public sealed class DemoDataSeederTests : IDisposable
 
         await using var db = _database.CreateContext();
         Assert.Equal(DemoDataSeeder.Accounts.Count, await db.Users.CountAsync());
+        Assert.Equal(DemoDataSeeder.Contracts.Count, await db.Contracts.CountAsync());
     }
 
     [Fact]
