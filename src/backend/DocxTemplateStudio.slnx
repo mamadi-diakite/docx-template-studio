@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DocxTemplateStudio.Api/DocxTemplateStudio.Api.csproj" />
+    <Project Path="src/DocxTemplateStudio.Application.Contracts/DocxTemplateStudio.Application.Contracts.csproj" />
+    <Project Path="src/DocxTemplateStudio.Application/DocxTemplateStudio.Application.csproj" />
+    <Project Path="src/DocxTemplateStudio.Domain/DocxTemplateStudio.Domain.csproj" />
+    <Project Path="src/DocxTemplateStudio.Infrastructure/DocxTemplateStudio.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DocxTemplateStudio.Api.IntegrationTests/DocxTemplateStudio.Api.IntegrationTests.csproj" />
+    <Project Path="tests/DocxTemplateStudio.Application.Tests/DocxTemplateStudio.Application.Tests.csproj" />
+  </Folder>
+</Solution>

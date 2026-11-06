@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\DocxTemplateStudio.Application.Contracts\DocxTemplateStudio.Application.Contracts.csproj" />
+    <ProjectReference Include="..\DocxTemplateStudio.Domain\DocxTemplateStudio.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
