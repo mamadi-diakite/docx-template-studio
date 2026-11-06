@@ -1,6 +1,3 @@
-using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.EmploymentContracts;
 
 /// <summary>Checks the domain rules up front, so a form gets every error at once instead of the first exception.</summary>

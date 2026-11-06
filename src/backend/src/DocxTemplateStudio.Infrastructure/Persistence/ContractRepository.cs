@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Domain;
-using Microsoft.EntityFrameworkCore;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence;
 
 public sealed class ContractRepository(DocxTemplateStudioDbContext db) : IContractRepository

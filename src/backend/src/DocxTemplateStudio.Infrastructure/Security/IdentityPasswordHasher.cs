@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using DocxTemplateStudio.Application.Security;
-
 namespace DocxTemplateStudio.Infrastructure.Security;
 
 /// <summary>PBKDF2 hashing from ASP.NET Core Identity, without the rest of Identity.</summary>

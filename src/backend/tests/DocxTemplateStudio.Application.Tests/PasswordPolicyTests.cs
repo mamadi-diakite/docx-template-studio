@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Application.Auth;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 public sealed class PasswordPolicyTests

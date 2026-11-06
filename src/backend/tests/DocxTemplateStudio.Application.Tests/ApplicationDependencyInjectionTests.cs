@@ -1,11 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Application.Security;
-using DocxTemplateStudio.Application.Storage;
-using DocxTemplateStudio.Application.Templates;
-using DocxTemplateStudio.Application.Users;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 public sealed class ApplicationDependencyInjectionTests

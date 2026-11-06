@@ -1,9 +1,3 @@
-using DocxTemplateStudio.Api.Auth;
-using DocxTemplateStudio.Application.Contracts.Templates;
-using DocxTemplateStudio.Application.Templates;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
 namespace DocxTemplateStudio.Api.Controllers;
 
 [ApiController]

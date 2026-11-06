@@ -1,7 +1,3 @@
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 /// <summary>Builds small Word documents with tagged content controls.</summary>

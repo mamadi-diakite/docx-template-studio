@@ -1,8 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using DocxTemplateStudio.Application.Security;
-using DocxTemplateStudio.Domain;
-using DocxTemplateStudio.Infrastructure.Persistence;
-
 namespace DocxTemplateStudio.Infrastructure.Seeding;
 
 public sealed class DemoDataSeeder(DocxTemplateStudioDbContext db, IPasswordHasher passwordHasher, TimeProvider timeProvider)

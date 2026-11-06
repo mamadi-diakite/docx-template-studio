@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Users;
 
 public interface IUserRepository

@@ -1,8 +1,3 @@
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Api.Auth;
 
 public sealed class JwtAccessTokenIssuer(JwtSettings settings, TimeProvider timeProvider) : IAccessTokenIssuer

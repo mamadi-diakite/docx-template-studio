@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using DocxTemplateStudio.Infrastructure.Persistence;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class DatabaseStartupTests(DocxTemplateStudioApiFactory factory) : IClassFixture<DocxTemplateStudioApiFactory>

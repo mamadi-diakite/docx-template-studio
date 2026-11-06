@@ -1,0 +1,13 @@
+global using Microsoft.Extensions.DependencyInjection;
+global using DocxTemplateStudio.Application.Auth;
+global using DocxTemplateStudio.Application.Common;
+global using DocxTemplateStudio.Application.Contracts.Auth;
+global using DocxTemplateStudio.Application.Contracts.Common;
+global using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
+global using DocxTemplateStudio.Application.Contracts.Templates;
+global using DocxTemplateStudio.Application.EmploymentContracts;
+global using DocxTemplateStudio.Application.Security;
+global using DocxTemplateStudio.Application.Storage;
+global using DocxTemplateStudio.Application.Templates;
+global using DocxTemplateStudio.Application.Users;
+global using DocxTemplateStudio.Domain;

@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using DocxTemplateStudio.Api.Auth;
-using DocxTemplateStudio.Application;
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Infrastructure;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var jwtSettings = JwtSettings.FromConfiguration(builder.Configuration, builder.Environment);

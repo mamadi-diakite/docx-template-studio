@@ -1,0 +1,14 @@
+global using System.IO.Compression;
+global using Microsoft.Data.Sqlite;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using DocumentFormat.OpenXml;
+global using DocumentFormat.OpenXml.Packaging;
+global using DocumentFormat.OpenXml.Wordprocessing;
+global using DocxTemplateStudio.Domain;
+global using DocxTemplateStudio.Infrastructure.Persistence;
+global using DocxTemplateStudio.Infrastructure.Security;
+global using DocxTemplateStudio.Infrastructure.Seeding;
+global using DocxTemplateStudio.Infrastructure.Storage;
+global using DocxTemplateStudio.Infrastructure.Templates;
+global using Xunit;

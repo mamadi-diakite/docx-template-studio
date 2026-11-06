@@ -1,6 +1,3 @@
-using System.IO.Compression;
-using DocxTemplateStudio.Infrastructure.Templates;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 public sealed class OpenXmlFieldKeyReaderTests

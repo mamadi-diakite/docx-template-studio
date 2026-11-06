@@ -1,8 +1,3 @@
-using DocxTemplateStudio.Application.Common;
-using DocxTemplateStudio.Application.Contracts.Templates;
-using DocxTemplateStudio.Application.Storage;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Templates;
 
 public sealed record TemplateDownload(string FileName, Stream Content);

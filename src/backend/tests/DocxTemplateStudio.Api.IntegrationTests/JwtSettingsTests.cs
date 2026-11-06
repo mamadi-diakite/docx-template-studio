@@ -1,8 +1,3 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
-using DocxTemplateStudio.Api.Auth;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class JwtSettingsTests

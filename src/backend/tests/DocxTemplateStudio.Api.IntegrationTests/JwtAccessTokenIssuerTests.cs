@@ -1,8 +1,3 @@
-using System.Security.Claims;
-using Microsoft.IdentityModel.JsonWebTokens;
-using DocxTemplateStudio.Api.Auth;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class JwtAccessTokenIssuerTests

@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Application.Templates;
-using DocxTemplateStudio.Domain;
-using Microsoft.EntityFrameworkCore;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence;
 
 public sealed class TemplateRepository(DocxTemplateStudioDbContext db) : ITemplateRepository

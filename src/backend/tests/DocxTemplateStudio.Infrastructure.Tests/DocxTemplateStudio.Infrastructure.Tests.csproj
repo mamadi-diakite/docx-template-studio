@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\DocxTemplateStudio.Infrastructure\DocxTemplateStudio.Infrastructure.csproj" />
   </ItemGroup>
 

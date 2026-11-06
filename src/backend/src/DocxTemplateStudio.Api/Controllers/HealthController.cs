@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace DocxTemplateStudio.Api.Controllers;
 
 [ApiController]

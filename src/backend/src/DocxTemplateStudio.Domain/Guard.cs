@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace DocxTemplateStudio.Domain;
 
 internal static class Guard

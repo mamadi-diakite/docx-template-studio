@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence.Configurations;
 
 internal sealed class UserConfiguration : IEntityTypeConfiguration<User>

@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using DocxTemplateStudio.Application.Users;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence;
 
 public sealed class UserRepository(DocxTemplateStudioDbContext db) : IUserRepository

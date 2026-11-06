@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Application.Contracts.Auth;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 public sealed class AuthServiceTests

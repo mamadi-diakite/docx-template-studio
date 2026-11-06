@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Application.Common;
-using DocxTemplateStudio.Application.Templates;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 public sealed class TemplateServiceTests

@@ -1,8 +1,3 @@
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using DocxTemplateStudio.Infrastructure.Persistence;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 public sealed class DependencyInjectionTests

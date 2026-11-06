@@ -1,10 +1,3 @@
-using DocxTemplateStudio.Application.Common;
-using DocxTemplateStudio.Application.Contracts.Common;
-using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
 namespace DocxTemplateStudio.Api.Controllers;
 
 [ApiController]

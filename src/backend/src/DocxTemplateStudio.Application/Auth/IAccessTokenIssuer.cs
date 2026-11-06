@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Auth;
 
 public interface IAccessTokenIssuer

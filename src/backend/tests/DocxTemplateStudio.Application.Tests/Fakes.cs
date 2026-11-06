@@ -1,11 +1,3 @@
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Application.Security;
-using DocxTemplateStudio.Application.Storage;
-using DocxTemplateStudio.Application.Templates;
-using DocxTemplateStudio.Application.Users;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 internal sealed class InMemoryUserRepository : IUserRepository

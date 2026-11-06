@@ -1,14 +1,3 @@
-using System.Net;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-using DocxTemplateStudio.Api.Auth;
-using DocxTemplateStudio.Application.Contracts.Auth;
-using DocxTemplateStudio.Infrastructure.Persistence;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class AuthEndpointsTests(DemoDataApiFactory factory) : IClassFixture<DemoDataApiFactory>

@@ -1,16 +1,3 @@
-using System.Net;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocxTemplateStudio.Api.Auth;
-using DocxTemplateStudio.Application.Contracts.Auth;
-using DocxTemplateStudio.Application.Contracts.Templates;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class TemplatesEndpointsTests(DemoDataApiFactory factory) : IClassFixture<DemoDataApiFactory>

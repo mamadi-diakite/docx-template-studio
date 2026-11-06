@@ -1,8 +1,3 @@
-using DocxTemplateStudio.Application.Common;
-using DocxTemplateStudio.Application.Contracts.Common;
-using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.EmploymentContracts;
 
 public sealed class ContractService(IContractRepository contracts, TimeProvider timeProvider)

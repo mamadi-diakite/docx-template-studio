@@ -1,7 +1,3 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Data.Sqlite;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 /// <summary>Runs the API against its own throwaway SQLite file.</summary>

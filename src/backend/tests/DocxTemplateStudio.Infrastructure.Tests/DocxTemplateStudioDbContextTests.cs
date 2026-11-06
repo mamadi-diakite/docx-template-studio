@@ -1,6 +1,3 @@
-using DocxTemplateStudio.Domain;
-using Microsoft.EntityFrameworkCore;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 public sealed class DocxTemplateStudioDbContextTests : IDisposable

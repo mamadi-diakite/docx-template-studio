@@ -1,11 +1,3 @@
-using System.Net;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
-using DocxTemplateStudio.Application.Contracts.Auth;
-using DocxTemplateStudio.Application.Contracts.Common;
-using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
-using Microsoft.AspNetCore.Mvc;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class ContractsEndpointsTests(DemoDataApiFactory factory) : IClassFixture<DemoDataApiFactory>

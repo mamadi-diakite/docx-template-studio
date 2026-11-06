@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Application.Contracts.EmploymentContracts;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Tests;
 
 public sealed class ContractValidatorTests

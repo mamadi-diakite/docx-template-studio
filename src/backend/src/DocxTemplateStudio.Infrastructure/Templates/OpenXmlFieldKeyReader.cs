@@ -1,9 +1,3 @@
-using System.IO.Packaging;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocxTemplateStudio.Application.Templates;
-
 namespace DocxTemplateStudio.Infrastructure.Templates;
 
 /// <summary>Reads content control tags with the Open XML SDK, without Microsoft Word.</summary>

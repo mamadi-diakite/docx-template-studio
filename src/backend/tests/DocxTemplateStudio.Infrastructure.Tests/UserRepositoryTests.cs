@@ -1,6 +1,3 @@
-using DocxTemplateStudio.Domain;
-using DocxTemplateStudio.Infrastructure.Persistence;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 public sealed class UserRepositoryTests : IDisposable

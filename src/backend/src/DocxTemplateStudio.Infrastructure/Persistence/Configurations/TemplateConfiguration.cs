@@ -1,7 +1,3 @@
-using DocxTemplateStudio.Domain;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence.Configurations;
 
 internal sealed class TemplateConfiguration : IEntityTypeConfiguration<Template>

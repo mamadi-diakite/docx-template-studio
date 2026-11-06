@@ -1,8 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
-using DocxTemplateStudio.Application.Auth;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Application.Templates;
-
 namespace DocxTemplateStudio.Application;
 
 public static class DependencyInjection

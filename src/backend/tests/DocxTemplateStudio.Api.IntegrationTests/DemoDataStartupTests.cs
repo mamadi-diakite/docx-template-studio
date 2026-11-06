@@ -1,8 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using DocxTemplateStudio.Infrastructure.Persistence;
-using DocxTemplateStudio.Infrastructure.Seeding;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class DemoDataStartupTests(DemoDataApiFactory factory) : IClassFixture<DemoDataApiFactory>

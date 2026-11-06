@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Templates;
 
 public interface ITemplateRepository

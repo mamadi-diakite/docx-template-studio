@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Infrastructure.Storage;
-
 namespace DocxTemplateStudio.Infrastructure.Tests;
 
 public sealed class LocalFileStorageTests : IDisposable

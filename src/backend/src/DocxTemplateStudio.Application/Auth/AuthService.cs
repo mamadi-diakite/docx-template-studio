@@ -1,8 +1,3 @@
-using DocxTemplateStudio.Application.Contracts.Auth;
-using DocxTemplateStudio.Application.Security;
-using DocxTemplateStudio.Application.Users;
-using DocxTemplateStudio.Domain;
-
 namespace DocxTemplateStudio.Application.Auth;
 
 public sealed class AuthService(

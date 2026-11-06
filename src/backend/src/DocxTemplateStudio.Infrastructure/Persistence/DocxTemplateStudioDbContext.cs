@@ -1,6 +1,3 @@
-using DocxTemplateStudio.Domain;
-using Microsoft.EntityFrameworkCore;
-
 namespace DocxTemplateStudio.Infrastructure.Persistence;
 
 public sealed class DocxTemplateStudioDbContext(DbContextOptions<DocxTemplateStudioDbContext> options) : DbContext(options)

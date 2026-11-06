@@ -1,5 +1,3 @@
-using DocxTemplateStudio.Application.Contracts.Auth;
-
 namespace DocxTemplateStudio.Application.Auth;
 
 public enum ChangePasswordStatus

@@ -1,18 +1,3 @@
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using DocxTemplateStudio.Application.EmploymentContracts;
-using DocxTemplateStudio.Application.Security;
-using DocxTemplateStudio.Application.Storage;
-using DocxTemplateStudio.Application.Templates;
-using DocxTemplateStudio.Application.Users;
-using DocxTemplateStudio.Infrastructure.Persistence;
-using DocxTemplateStudio.Infrastructure.Security;
-using DocxTemplateStudio.Infrastructure.Seeding;
-using DocxTemplateStudio.Infrastructure.Storage;
-using DocxTemplateStudio.Infrastructure.Templates;
-
 namespace DocxTemplateStudio.Infrastructure;
 
 public static class DependencyInjection

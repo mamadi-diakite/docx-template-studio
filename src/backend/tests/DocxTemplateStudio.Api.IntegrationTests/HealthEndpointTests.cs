@@ -1,6 +1,3 @@
-using System.Net;
-using System.Net.Http.Json;
-
 namespace DocxTemplateStudio.Api.IntegrationTests;
 
 public sealed class HealthEndpointTests(DocxTemplateStudioApiFactory factory) : IClassFixture<DocxTemplateStudioApiFactory>
