@@ -4,24 +4,36 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using DocxTemplateStudio.Application.EmploymentContracts;
 using DocxTemplateStudio.Application.Security;
+using DocxTemplateStudio.Application.Storage;
+using DocxTemplateStudio.Application.Templates;
 using DocxTemplateStudio.Application.Users;
 using DocxTemplateStudio.Infrastructure.Persistence;
 using DocxTemplateStudio.Infrastructure.Security;
 using DocxTemplateStudio.Infrastructure.Seeding;
+using DocxTemplateStudio.Infrastructure.Storage;
+using DocxTemplateStudio.Infrastructure.Templates;
 
 namespace DocxTemplateStudio.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
+    public const string DefaultStorageRootPath = "App_Data/files";
+
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        string connectionString,
+        string storageRootPath = DefaultStorageRootPath)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(connectionString);
 
         services.AddDbContext<DocxTemplateStudioDbContext>(options => options.UseSqlite(connectionString));
         services.TryAddSingleton(TimeProvider.System);
         services.AddSingleton<IPasswordHasher, IdentityPasswordHasher>();
+        services.AddSingleton<IFileStorage>(new LocalFileStorage(storageRootPath));
+        services.AddSingleton<IFieldKeyReader, OpenXmlFieldKeyReader>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IContractRepository, ContractRepository>();
+        services.AddScoped<ITemplateRepository, TemplateRepository>();
         services.AddScoped<DemoDataSeeder>();
 
         return services;

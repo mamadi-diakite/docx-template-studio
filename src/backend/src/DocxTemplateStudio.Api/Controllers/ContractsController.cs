@@ -31,7 +31,7 @@ public sealed class ContractsController(ContractService service) : ControllerBas
 
         return result.Value is { } contract
             ? CreatedAtAction(nameof(Get), new { id = contract.Id }, contract)
-            : InvalidRequest(result.Errors);
+            : this.InvalidRequest(result.Errors);
     }
 
     [HttpPut("{id:guid}")]
@@ -43,24 +43,11 @@ public sealed class ContractsController(ContractService service) : ControllerBas
         {
             ServiceResultStatus.Ok => Ok(result.Value),
             ServiceResultStatus.NotFound => NotFound(),
-            _ => InvalidRequest(result.Errors),
+            _ => this.InvalidRequest(result.Errors),
         };
     }
 
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken) =>
         await service.DeleteAsync(id, cancellationToken) ? NoContent() : NotFound();
-
-    private ActionResult InvalidRequest(IReadOnlyDictionary<string, string[]> errors)
-    {
-        foreach (var (field, messages) in errors)
-        {
-            foreach (var message in messages)
-            {
-                ModelState.AddModelError(field, message);
-            }
-        }
-
-        return ValidationProblem();
-    }
 }

@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using DocxTemplateStudio.Application.Auth;
 using DocxTemplateStudio.Application.EmploymentContracts;
+using DocxTemplateStudio.Application.Templates;
 
 namespace DocxTemplateStudio.Application;
 
@@ -10,6 +11,7 @@ public static class DependencyInjection
     {
         services.AddScoped<AuthService>();
         services.AddScoped<ContractService>();
+        services.AddScoped<TemplateService>();
 
         return services;
     }

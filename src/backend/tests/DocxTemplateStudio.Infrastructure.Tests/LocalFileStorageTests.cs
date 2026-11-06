@@ -1,0 +1,63 @@
+using DocxTemplateStudio.Infrastructure.Storage;
+
+namespace DocxTemplateStudio.Infrastructure.Tests;
+
+public sealed class LocalFileStorageTests : IDisposable
+{
+    private readonly string _root = Path.Combine(Path.GetTempPath(), "docx-template-studio-tests", Guid.NewGuid().ToString("N"), "files");
+
+    public void Dispose()
+    {
+        var parent = Path.GetDirectoryName(_root)!;
+        if (Directory.Exists(parent))
+        {
+            Directory.Delete(parent, recursive: true);
+        }
+    }
+
+    [Fact]
+    public async Task Saves_content_under_a_random_key_and_reads_it_back()
+    {
+        var storage = new LocalFileStorage(_root);
+
+        var key = await storage.SaveAsync(new MemoryStream([1, 2, 3]), default);
+        var other = await storage.SaveAsync(new MemoryStream([4]), default);
+
+        Assert.NotEqual(key, other);
+        Assert.Matches("^[0-9a-f]{32}$", key);
+        await using var read = await storage.OpenReadAsync(key, default);
+        using var copy = new MemoryStream();
+        await read.CopyToAsync(copy);
+        Assert.Equal([1, 2, 3], copy.ToArray());
+    }
+
+    [Fact]
+    public async Task Delete_removes_the_file_and_ignores_a_missing_one()
+    {
+        var storage = new LocalFileStorage(_root);
+        var key = await storage.SaveAsync(new MemoryStream([1]), default);
+
+        await storage.DeleteAsync(key, default);
+        await storage.DeleteAsync(key, default);
+
+        Assert.Empty(Directory.GetFiles(_root));
+    }
+
+    [Theory]
+    [InlineData("../secret")]
+    [InlineData("not-a-key")]
+    public async Task Refuses_keys_it_did_not_generate(string key)
+    {
+        var storage = new LocalFileStorage(_root);
+
+        await Assert.ThrowsAsync<ArgumentException>(() => storage.DeleteAsync(key, default));
+        await Assert.ThrowsAsync<ArgumentException>(() => storage.OpenReadAsync(key, default));
+    }
+
+    [Fact]
+    public async Task Rejects_missing_arguments()
+    {
+        Assert.Throws<ArgumentException>(() => new LocalFileStorage(" "));
+        await Assert.ThrowsAsync<ArgumentNullException>(() => new LocalFileStorage(_root).SaveAsync(null!, default));
+    }
+}
